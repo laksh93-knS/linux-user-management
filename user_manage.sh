@@ -1,62 +1,42 @@
 #!/bin/bash
 
-# =========================================
-# Linux User Management System
-# Author: Your Name
-# Description: Menu-driven Bash script to manage Linux users
-# =========================================
+# Linux User Management Script 
 
 while true
 do
-    echo "================================="
-    echo "   Linux User Management System"
-    echo "================================="
+    echo ""
+    echo "===== User Management Menu ====="
     echo "1. Create User"
     echo "2. Delete User"
     echo "3. List Users"
     echo "4. Exit"
-    echo "================================="
+    echo "==============================="
 
-    read -p "Enter your choice: " choice
+    echo "Enter your choice:"
+    read choice
 
-    case $choice in
+    if [ "$choice" = "1" ]; then
+        echo "Enter username to create:"
+        read username
+        sudo useradd $username
+        echo "User created successfully"
 
-        1)
-            read -p "Enter username: " username
-            id "$username" &>/dev/null
-            if [ $? -eq 0 ]; then
-                echo "User already exists!"
-            else
-                sudo useradd "$username"
-                echo "User '$username' created successfully."
-            fi
-            ;;
+    elif [ "$choice" = "2" ]; then
+        echo "Enter username to delete:"
+        read username
+        sudo userdel $username
+        echo "User deleted successfully"
 
-        2)
-            read -p "Enter username: " username
-            id "$username" &>/dev/null
-            if [ $? -ne 0 ]; then
-                echo "User does not exist!"
-            else
-                sudo userdel "$username"
-                echo "User '$username' deleted successfully."
-            fi
-            ;;
+    elif [ "$choice" = "3" ]; then
+        echo "List of users:"
+        cut -d: -f1 /etc/passwd
 
-        3)
-            echo "------ System Users ------"
-            cut -d: -f1 /etc/passwd
-            ;;
+    elif [ "$choice" = "4" ]; then
+        echo "Exiting..."
+        break
 
-        4)
-            echo "Exiting program..."
-            break
-            ;;
-
-        *)
-            echo "Invalid choice. Please try again."
-            ;;
-
-    esac
+    else
+        echo "Invalid choice, try again"
+    fi
 
 done
