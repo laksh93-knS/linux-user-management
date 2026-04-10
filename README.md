@@ -9,7 +9,6 @@ This project is a Bash-based tool to automate user management tasks in Linux sys
 - Create new users
 - Delete users
 - List all system users
-- Menu-driven interface
 
 ## 🛠️ Technologies Used
 - Linux
@@ -19,9 +18,9 @@ This project is a Bash-based tool to automate user management tasks in Linux sys
 This script helps system administrators perform user-related operations efficiently using automation and command-line tools.
 
 ## ⚙️ Prerequisites
-- Linux system (Ubuntu/CentOS)
+- Linux system 
 - Basic terminal knowledge
 
-## 🔧 Installation
-
-Clone the repository:
+## How to Run
+chmod +x user_manage.sh
+./user_manage.sh
