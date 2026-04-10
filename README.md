@@ -21,6 +21,9 @@ This script helps system administrators perform user-related operations efficien
 - Linux system 
 - Basic terminal knowledge
 
-## How to Run
+## ▶️ How to Run
+1. Give execute permission:
 chmod +x user_manage.sh
+
+2. Run the script:
 ./user_manage.sh
