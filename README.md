@@ -30,9 +30,6 @@ You only need:
 
 ## Installation
 
-Clone the repository:
-git clone https://github.com/lakshsonar/quick-system-report.git
-
 Navigate to the folder:
 cd quick-system-report
 
