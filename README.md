@@ -1,33 +1,91 @@
-# Linux User Management System
+# Quick System Report Script 
 
-## 📌 Overview
-This project is a Bash-based tool to automate user management tasks in Linux systems such as creating, deleting, and listing users.
+## Description
+This project is a simple Bash script that shows important system information in one place.
 
-## ⚙️ Features
-- Create new users
-- Delete users
-- List all system users
+It displays:
+- Date and time
+- Current user
+- Disk usage
+- Memory usage
+- Running processes
+- IP address
+- Active users
+- Last login details
+- SSH sessions
+- NFS mount information
 
-## 🛠️ Technologies Used
-- Linux
-- Bash Scripting
+The script helps to quickly check system status using a single command.
 
-## 📋 Description
-This script helps system administrators perform user-related operations efficiently using automation and command-line tools.
+---
 
-## ⚙️ Prerequisites
-- Linux system
-- Basic terminal knowledge
+## Prerequisites
+No additional packages are required.
 
-## ▶️ How to Run
+You only need:
+- A Linux system (Ubuntu, Debian, etc.)
+- Terminal access
 
-1. Give execute permission:chmod +x user_manage.sh
+---
 
-2. Run the script:
+## Installation
 
-./user_manage.sh
+Clone the repository:
+git clone https://github.com/yourusername/quick-system-report.git
 
-## 📚 Concepts Used
-- Linux User Management
-- Bash Scripting (if-else, loop)
-- Basic System Administration
+Navigate to the folder:
+cd quick-system-report
+
+Make the script executable:
+chmod +x quick_system_report.sh
+
+---
+
+## Usage
+
+Run the script:
+./quick_system_report.sh
+
+---
+
+## Example Output
+
+========== Quick System Report ==========
+
+Date and Time:
+<current date>
+
+Current User:
+<username>
+
+Disk Usage:
+<disk details>
+
+Memory Usage:
+<memory details>
+
+Running Processes:
+<number>
+
+IP Address:
+<ip address>
+
+Active Users:
+<number>
+
+Last Login:
+<login info>
+
+SSH Sessions:
+<session info>
+
+NFS Mounts:
+<nfs details>
+
+=========================================
+
+---
+
+## Contributing
+
+Contributions are welcome. You can improve this project by adding new features or making changes.
